@@ -56,11 +56,16 @@ flowchart LR
 
 ## How it was built
 
-Kokon was built by one developer working with **AI coding agents (Claude Code)** in a spec → implement →
-review → test loop. I owned product decisions, domain modelling, architecture and acceptance, and verified
-every change through tests and hands-on use in a real breeding business. AI agents did much of the typing.
-The project is a practical case study in shipping a real product with AI-assisted development: writing precise
-specs, keeping agents on track with tests and type contracts, and reviewing generated code.
+Kokon is developed by one person working with an AI coding agent (**Claude Code**). I act as product owner
+and lead developer. I collect requirements from breeders, decide what gets built, break the work into scoped
+tasks, and accept or reject the results after trying them on real workflows.
+
+Guardrails make sure AI-written code earns its place:
+
+- **160+ automated tests** for domain rules, API, permissions and multi-tenancy
+- **Typed API contracts**: frontend types are generated from the backend's OpenAPI schema
+- **Linters and type-checking** on both backend and frontend
+- **A staging environment** running only on simulated data, used before releasing to production
 
 ## Product process
 
